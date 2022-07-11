@@ -1,0 +1,16 @@
+@import "./null.scss";
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Montserrat:wght@400;700&display=swap');
+
+
+%main-size {
+    width: 1445px;
+    margin: 0 auto;
+}
+
+.header {
+    @extend %main-size;
+    height: 795px;
+    background-image: url('../img/background/header__bg1.png'), url("../img/background/header__bg2.png");
+    background-repeat: no-repeat;
+    background-position: left center, center center
+}
