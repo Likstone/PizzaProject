@@ -3,14 +3,385 @@
 
 
 %main-size {
-    width: 1445px;
+    max-width: 1440px;
     margin: 0 auto;
 }
+@mixin title($color, $size) {   
+    font-size: $size;
+    font-family: 'Grand Hotel';
+    line-height: 1.2;
+    font-weight: 400;
+    color: $color;
+}
 
+@mixin text($color, $size) {
+    color: $color;
+    font-size: $size;
+    line-height: 1.2;
+    font-weight: 400;
+    font-family: 'Montserrat';    
+}
+.container {
+    position: relative;
+}
+
+body {
+    background-color: rgba(73, 70, 70, 0.534);
+}
 .header {
     @extend %main-size;
-    height: 795px;
-    background-image: url('../img/background/header__bg1.png'), url("../img/background/header__bg2.png");
-    background-repeat: no-repeat;
-    background-position: left center, center center
+    min-height: 800px;
+    position: relative;
+    background-size: cover;
+    background: url("../img/background/header__bg1.png") left no-repeat;
+    background-color: #303030;  
+    display: flex;
+    z-index:99999999;
+    &__logo {
+        max-width: 600px;
+        width: 100%;
+    }
+    &__bg-img {
+        position: absolute;
+        left: -168px;
+        bottom: 0; 
+        z-index: 1;             
+        
+    }
+
+    &__title {
+        @include title(#ffc200, 127.4px);
+        position: relative;
+        z-index: 3;
+    }
+    &__about {
+        width: 100%;
+        background-color: #2f2f2f;
+        position: relative;  
+        z-index: 2;      
+    }
+    &__menu {
+        margin-top: 50px;
+    }
+    
+    &__article {
+        max-width: 615px;
+        margin: 115px 0 0 85px;
+    }
+
+
+    &__text {
+        margin-top: 30px;
+        position: relative;
+        z-index: 3;
+        @include text(white,29.8px);
+    }
+
+    &__button {
+        margin-top: 45px;
+        margin-bottom: 20px;
+    }
+    
+
+    &__background-icon {
+        position: relative; 
+        img {
+            position: absolute;
+            opacity: 0.75;
+            z-index: 2;
+        }
+        img:nth-child(1) {
+            top: 115px;
+            left: 30px;
+        }   
+        img:nth-child(2) {
+            top: 318px;
+            left: -67px;
+        }   
+        img:nth-child(3) {
+            top: 660px;
+            left: 53px;
+        }  
+        img:nth-child(4) {
+            top: 652px;
+            left: 232px;
+        }  
+        img:nth-child(5) {
+            top: 684px;
+            left: 484px;
+        } 
+        img:nth-child(6) {
+            top: 124px;
+            right: 183px;
+        }  
+        img:nth-child(7) {
+            top: 725px;
+            right: 150px;
+        } 
+        img:nth-child(8) {
+            top: 519px;
+            right: 50px;
+        } 
+        img:nth-child(9) {            
+            top: 299px;
+            right: 100px;
+        } 
+
+    }    
+}
+    
+.nav-menu {
+    max-width: 800px;
+    font-size: 25px;
+    color: white; 
+    position: relative;
+    font-family: "Montserrat";
+    font-weight: 400;
+    line-height: 1.2;
+    z-index: 2;
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        a {
+            color: white;
+        }       
+        button {
+            background-color: rgba(#000000, 0);
+            padding: 0 10px 0 20px;  
+        }
+        li {
+            padding: 0 10px;
+            
+        }
+    }
+}
+
+.best-seller {
+    @extend %main-size;
+    display: flex;
+    min-height: 800px;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+
+    &__anotation {
+        text-align: center;
+        margin-top: 140px; 
+    }
+
+    &__title {
+        @include title(#333333, 75px);
+    }
+
+    &__subtitle {       
+        @include text(#333333, 25.3px);
+        max-width: 895px;   
+        margin-top: 45px;
+        
+    }
+
+    &__offer {
+        margin-top: 75px;
+    }
+}
+
+
+.offer {
+    display: flex;    
+    text-align: center;
+    justify-content: space-around;
+    align-content: space-around;
+    width: 100%;
+    
+
+    &__box {
+        padding: 0 10px;        
+        img {            
+            width: 100%;
+        }
+    }
+
+    &__name {
+        @include title(#333333, 41.7px);
+        margin: 15px 0 20px 0;          
+    }
+
+    &__text {
+        @include text(#333333, 16.9px);  
+        max-width: 239px;      
+    }
+}
+
+.oriental {
+    @extend %main-size;
+    min-height: 800px;
+    background: url("../img/bg__img/top.png") no-repeat, white;
+    background-position: 0 200px, 0 0; 
+    display: flex; 
+
+    &__img {   
+        width: 50%;   
+        display: flex;        
+        align-items: center;
+        justify-content: center;
+        margin: 190px 10px 10px 10px;
+    }
+    &__annotation {
+        width: 50%;
+        margin: 0 50px
+    }
+
+    &__title {
+        @include title(#ffc200, 100px);
+        margin-top: 350px;
+    }
+
+    &__text {
+        @include text(white, 25px);
+        padding-left: 5px;
+        max-width: 560px;
+    }
+
+    &__button {
+        margin-top: 60px;
+        padding-bottom: 150px;
+    }
+    
+}
+
+.statistic {
+    @extend %main-size;
+    min-height: 800px;
+    background-color: #303030;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    &__title {
+        @include title(#ffc200, 100px);        
+        margin-top:110px;
+    }
+
+    &__text {        
+        @include text(#ffff, 24.7px);
+        max-width: 800px;
+        margin: 50px auto 100px auto;
+    }
+
+    &__graph {
+        display: flex;
+        justify-content: space-around;
+        min-width: 100%;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+
+    &__circle {
+        margin-bottom: 50px;
+    }
+}
+
+.graph-circle {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 5px solid #ffff;
+    width: 233px;
+    height: 233px;
+    border-radius: 50%;
+    justify-content: center;
+    text-transform: uppercase;   
+    &__count {
+        @include text(#ffc200, 52.6px);
+    }
+
+    &__name {
+        @include text(#ffff, 28.9px);
+        margin-top: 10px;
+    }
+}
+
+
+
+.circle-img {
+    img {
+        max-width: 100%;
+    }
+}
+
+
+
+.order-button {
+    position: relative;
+    z-index: 3;
+    background-color: #ffc200;
+    font-size: 19.3px;
+    line-height: 1.2;
+    font-weight: 700;
+    font-family: 'Montserrat';
+    color: #333333;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 15px 57px;
+}
+
+.bg-icon {
+    
+}
+
+
+@media (max-width:1321px) {
+    .header {
+        &__background-icon {            
+            
+            & img:nth-child(5),img:nth-child(9),img:nth-child(7) {
+                display: none;
+            }
+            & img:nth-child(6) {               
+                right: 20px;
+            }            
+        }
+    }
+
+    .oriental {
+        background-position: 0 80px, 0 0;
+    }
+    
+}
+
+@media (max-width:635px) {
+    .header {
+        &__menu {
+            display: none;
+        }
+
+        &__logo {
+            display: none;
+        }
+
+        &__about {
+            img {
+                display: none;
+            }
+        }
+        &__text {
+            text-align: center;
+        }
+        title {
+            text-align: center;
+        }
+        &__article {            
+            margin: 115px 0 0 20px;
+        }
+        &__button {   
+            display: flex;
+            justify-content: center;        
+            padding-bottom: 50px;
+            margin: 115px auto;                      
+        }
+    }
+    .oriental {
+        background-position: 0 20px, 0 0;
+        
+    }
 }

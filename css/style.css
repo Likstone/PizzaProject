@@ -71,14 +71,410 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
-.header {
-  width: 1445px;
+.statistic, .oriental, .best-seller, .header {
+  max-width: 1440px;
   margin: 0 auto;
 }
 
+.container {
+  position: relative;
+}
+
+body {
+  background-color: rgba(73, 70, 70, 0.534);
+}
+
 .header {
-  height: 795px;
-  background-image: url("../img/background/header__bg1.png"), url("../img/background/header__bg2.png");
-  background-repeat: no-repeat;
-  background-position: left center, center center;
+  min-height: 800px;
+  position: relative;
+  background-size: cover;
+  background: url("../img/background/header__bg1.png") left no-repeat;
+  background-color: #303030;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 99999999;
+}
+.header__logo {
+  max-width: 600px;
+  width: 100%;
+}
+.header__bg-img {
+  position: absolute;
+  left: -168px;
+  bottom: 0;
+  z-index: 1;
+}
+.header__title {
+  font-size: 127.4px;
+  font-family: "Grand Hotel";
+  line-height: 1.2;
+  font-weight: 400;
+  color: #ffc200;
+  position: relative;
+  z-index: 3;
+}
+.header__about {
+  width: 100%;
+  background-color: #2f2f2f;
+  position: relative;
+  z-index: 2;
+}
+.header__menu {
+  margin-top: 50px;
+}
+.header__article {
+  max-width: 615px;
+  margin: 115px 0 0 85px;
+}
+.header__text {
+  margin-top: 30px;
+  position: relative;
+  z-index: 3;
+  color: white;
+  font-size: 29.8px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Montserrat";
+}
+.header__button {
+  margin-top: 45px;
+  margin-bottom: 20px;
+}
+.header__background-icon {
+  position: relative;
+}
+.header__background-icon img {
+  position: absolute;
+  opacity: 0.75;
+  z-index: 2;
+}
+.header__background-icon img:nth-child(1) {
+  top: 115px;
+  left: 30px;
+}
+.header__background-icon img:nth-child(2) {
+  top: 318px;
+  left: -67px;
+}
+.header__background-icon img:nth-child(3) {
+  top: 660px;
+  left: 53px;
+}
+.header__background-icon img:nth-child(4) {
+  top: 652px;
+  left: 232px;
+}
+.header__background-icon img:nth-child(5) {
+  top: 684px;
+  left: 484px;
+}
+.header__background-icon img:nth-child(6) {
+  top: 124px;
+  right: 183px;
+}
+.header__background-icon img:nth-child(7) {
+  top: 725px;
+  right: 150px;
+}
+.header__background-icon img:nth-child(8) {
+  top: 519px;
+  right: 50px;
+}
+.header__background-icon img:nth-child(9) {
+  top: 299px;
+  right: 100px;
+}
+
+.nav-menu {
+  max-width: 800px;
+  font-size: 25px;
+  color: white;
+  position: relative;
+  font-family: "Montserrat";
+  font-weight: 400;
+  line-height: 1.2;
+  z-index: 2;
+}
+.nav-menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.nav-menu ul a {
+  color: white;
+}
+.nav-menu ul button {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0 10px 0 20px;
+}
+.nav-menu ul li {
+  padding: 0 10px;
+}
+
+.best-seller {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 800px;
+  background-color: white;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.best-seller__anotation {
+  text-align: center;
+  margin-top: 140px;
+}
+.best-seller__title {
+  font-size: 75px;
+  font-family: "Grand Hotel";
+  line-height: 1.2;
+  font-weight: 400;
+  color: #333333;
+}
+.best-seller__subtitle {
+  color: #333333;
+  font-size: 25.3px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Montserrat";
+  max-width: 895px;
+  margin-top: 45px;
+}
+.best-seller__offer {
+  margin-top: 75px;
+}
+
+.offer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  width: 100%;
+}
+.offer__box {
+  padding: 0 10px;
+}
+.offer__box img {
+  width: 100%;
+}
+.offer__name {
+  font-size: 41.7px;
+  font-family: "Grand Hotel";
+  line-height: 1.2;
+  font-weight: 400;
+  color: #333333;
+  margin: 15px 0 20px 0;
+}
+.offer__text {
+  color: #333333;
+  font-size: 16.9px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Montserrat";
+  max-width: 239px;
+}
+
+.oriental {
+  min-height: 800px;
+  background: url("../img/bg__img/top.png") no-repeat, white;
+  background-position: 0 200px, 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.oriental__img {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 190px 10px 10px 10px;
+}
+.oriental__annotation {
+  width: 50%;
+  margin: 0 50px;
+}
+.oriental__title {
+  font-size: 100px;
+  font-family: "Grand Hotel";
+  line-height: 1.2;
+  font-weight: 400;
+  color: #ffc200;
+  margin-top: 350px;
+}
+.oriental__text {
+  color: white;
+  font-size: 25px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Montserrat";
+  padding-left: 5px;
+  max-width: 560px;
+}
+.oriental__button {
+  margin-top: 60px;
+  padding-bottom: 150px;
+}
+
+.statistic {
+  min-height: 800px;
+  background-color: #303030;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+.statistic__title {
+  font-size: 100px;
+  font-family: "Grand Hotel";
+  line-height: 1.2;
+  font-weight: 400;
+  color: #ffc200;
+  margin-top: 110px;
+}
+.statistic__text {
+  color: white;
+  font-size: 24.7px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Montserrat";
+  max-width: 800px;
+  margin: 50px auto 100px auto;
+}
+.statistic__graph {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  min-width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 100%;
+}
+.statistic__circle {
+  margin-bottom: 50px;
+}
+
+.graph-circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  border: 5px solid white;
+  width: 233px;
+  height: 233px;
+  border-radius: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+}
+.graph-circle__count {
+  color: #ffc200;
+  font-size: 52.6px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Montserrat";
+}
+.graph-circle__name {
+  color: white;
+  font-size: 28.9px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Montserrat";
+  margin-top: 10px;
+}
+
+.circle-img img {
+  max-width: 100%;
+}
+
+.order-button {
+  position: relative;
+  z-index: 3;
+  background-color: #ffc200;
+  font-size: 19.3px;
+  line-height: 1.2;
+  font-weight: 700;
+  font-family: "Montserrat";
+  color: #333333;
+  text-transform: uppercase;
+  border-radius: 5px;
+  padding: 15px 57px;
+}
+
+@media (max-width: 1321px) {
+  .header__background-icon img:nth-child(5), .header__background-icon img:nth-child(9), .header__background-icon img:nth-child(7) {
+    display: none;
+  }
+  .header__background-icon img:nth-child(6) {
+    right: 20px;
+  }
+  .oriental {
+    background-position: 0 80px, 0 0;
+  }
+}
+@media (max-width: 635px) {
+  .header__menu {
+    display: none;
+  }
+  .header__logo {
+    display: none;
+  }
+  .header__about img {
+    display: none;
+  }
+  .header__text {
+    text-align: center;
+  }
+  .header title {
+    text-align: center;
+  }
+  .header__article {
+    margin: 115px 0 0 20px;
+  }
+  .header__button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 50px;
+    margin: 115px auto;
+  }
+  .oriental {
+    background-position: 0 20px, 0 0;
+  }
 }
