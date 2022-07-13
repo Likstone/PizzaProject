@@ -427,6 +427,46 @@ body {
 
 }
 
+.footer {
+    @extend %main-size;
+    min-height: 796px;
+    background-color: #303030;
+    display: flex;   
+
+    &__nav-box {  
+        height: 100%; 
+        display: grid;
+        width: 100%;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 255px 90px;
+    }
+    
+    &__title {
+        @include text(#ffff, 25px);
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 35px;
+    }
+    ul,a, &__text {
+        @include text(#ffff, 23.6px);
+        font-weight: 400;
+    }
+
+    li {
+        margin: 15px 0;
+    }
+
+    &__icons {
+        margin-top: 40px;
+    }
+
+    &__coulums {
+        padding: 0 25px;
+    }
+
+}
 
 .circle-img {
     img {
@@ -515,6 +555,35 @@ body {
     
 }
 
+@media (max-width:500px) {    
+    .offer {
+        flex-direction: column;        
+        &__box {            
+            img {
+                width: 200px;
+            }
+        }
+        &__text {
+            margin: 0 auto;
+        }
+    }
+
+    .bg-icon {
+        img:nth-child(1) {
+            display: none;
+        }
+    }
+    
+    .header__title, .oriental__title, .statistic__title, .chicken-grill__title, .subscribe__title {
+        font-size: 80px;
+    }
+    .lenora-fields {
+        &__text {
+            @include text(#333333, 30px);
+        }
+    }
+}
+
 @media (max-width:635px) {
     .header {
         text-align: center;
@@ -531,19 +600,21 @@ body {
                 display: none;
             }
         }
+        &__article {
+            margin: 80px 0;
+        }
+
 
         title {
             text-align: center;
-        }
-        &__article {            
-            margin: 115px 0 0 20px;
-        }
+        }        
         &__button {   
             display: flex;
             justify-content: center;        
             padding-bottom: 50px;
             margin: 115px auto;                      
         }
+        
     }
     .oriental {
         background-position: 0 20px, 0 0;
@@ -592,6 +663,25 @@ body {
 
         &__button {
             margin: 15px auto;
+        }
+    }
+}
+
+@media (max-width:990px) {
+    .footer {
+        &__title-annotation {
+            display: none;
+        }
+        &__nav-box {
+            margin: 50px auto;
+            display: flex;
+        }
+        &__coulums {
+            text-align: center;
+            width: 100%;
+        }
+        &__title {
+            margin-top: 50px;
         }
     }
 }
