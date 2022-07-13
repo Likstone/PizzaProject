@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
-.statistic, .oriental, .best-seller, .header {
+.lenora-fields, .chicken-grill, .statistic, .oriental, .best-seller, .header {
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -339,6 +339,7 @@ body {
 }
 
 .statistic {
+  position: relative;
   min-height: 800px;
   background-color: #303030;
   display: -webkit-box;
@@ -356,7 +357,7 @@ body {
   line-height: 1.2;
   font-weight: 400;
   color: #ffc200;
-  margin-top: 110px;
+  margin-top: 80px;
 }
 .statistic__text {
   color: white;
@@ -371,15 +372,64 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   min-width: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   height: 100%;
 }
 .statistic__circle {
-  margin-bottom: 50px;
+  margin: 0 30px 50px 30px;
+}
+
+.chicken-grill {
+  min-height: 800px;
+  background: url("../img/bg__img/bottom.png") no-repeat, white;
+  background-position: 0 -350px, 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.chicken-grill__img {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 120px 10px 10px 10px;
+}
+.chicken-grill__annotation {
+  width: 50%;
+  margin: 0 0 0 135px;
+}
+.chicken-grill__title {
+  font-size: 100px;
+  font-family: "Grand Hotel";
+  line-height: 1.2;
+  font-weight: 400;
+  color: #ffc200;
+  margin-top: 150px;
+}
+.chicken-grill__text {
+  color: white;
+  font-size: 25px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Montserrat";
+  padding-left: 5px;
+  margin-top: 20px;
+  max-width: 560px;
+}
+.chicken-grill__button {
+  margin-top: 70px;
+  padding-bottom: 150px;
 }
 
 .graph-circle {
@@ -416,6 +466,57 @@ body {
   margin-top: 10px;
 }
 
+.lenora-fields {
+  position: relative;
+  min-height: 796px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background: rgba(255, 226, 0, 0.6);
+}
+.lenora-fields__bg-gradient {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(253, 204, 44, 0.6);
+  z-index: 1;
+}
+.lenora-fields img {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.lenora-fields__text {
+  color: #333333;
+  font-size: 44.9px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Montserrat";
+  max-width: 920px;
+  margin: 0 auto;
+  z-index: 2;
+}
+.lenora-fields__title {
+  font-size: 74.2px;
+  font-family: "Grand Hotel";
+  line-height: 1.2;
+  font-weight: 400;
+  color: #333333;
+  margin-top: 50px;
+  z-index: 3;
+}
+
 .circle-img img {
   max-width: 100%;
 }
@@ -434,6 +535,48 @@ body {
   padding: 15px 57px;
 }
 
+.bg-icon img {
+  position: absolute;
+  opacity: 0.24;
+  z-index: 2;
+}
+.bg-icon img:nth-child(1) {
+  top: 50px;
+  left: 328px;
+}
+.bg-icon img:nth-child(2) {
+  top: 250px;
+  left: 57px;
+}
+.bg-icon img:nth-child(3) {
+  bottom: 41px;
+  left: 90px;
+}
+.bg-icon img:nth-child(4) {
+  bottom: 28px;
+  right: 392px;
+}
+.bg-icon img:nth-child(5) {
+  bottom: 50px;
+  left: 301px;
+}
+.bg-icon img:nth-child(6) {
+  bottom: 41px;
+  right: 161px;
+}
+.bg-icon img:nth-child(7) {
+  bottom: 186px;
+  right: 45px;
+}
+.bg-icon img:nth-child(8) {
+  top: 287px;
+  right: 133px;
+}
+.bg-icon img:nth-child(9) {
+  top: 299px;
+  right: 100px;
+}
+
 @media (max-width: 1321px) {
   .header__background-icon img:nth-child(5), .header__background-icon img:nth-child(9), .header__background-icon img:nth-child(7) {
     display: none;
@@ -446,6 +589,9 @@ body {
   }
 }
 @media (max-width: 635px) {
+  .header {
+    text-align: center;
+  }
   .header__menu {
     display: none;
   }
@@ -454,9 +600,6 @@ body {
   }
   .header__about img {
     display: none;
-  }
-  .header__text {
-    text-align: center;
   }
   .header title {
     text-align: center;
@@ -476,5 +619,44 @@ body {
   }
   .oriental {
     background-position: 0 20px, 0 0;
+    text-align: center;
+  }
+  .oriental__button {
+    padding-bottom: 20px;
+  }
+  .oriental__img {
+    display: none;
+  }
+  .oriental__annotation {
+    width: 100%;
+    margin: 0 50px;
+  }
+  .chicken-grill {
+    background-position: 0 -170px, 0 0;
+    text-align: center;
+  }
+  .chicken-grill__button {
+    padding-bottom: 20px;
+  }
+  .chicken-grill__img {
+    display: none;
+  }
+  .chicken-grill__annotation {
+    width: 100%;
+    margin: 0 50px;
+  }
+  .statistic .bg-icon img {
+    display: none;
+  }
+}
+@media (max-width: 1000px) {
+  .statistic .bg-icon img:nth-child(5), .statistic .bg-icon img:nth-child(4), .statistic .bg-icon img:nth-child(2), .statistic .bg-icon img:nth-child(8) {
+    display: none;
+  }
+  .chicken-grill {
+    background-position: 0 -190px, 0 0;
+  }
+  .chicken-grill__title {
+    margin-top: 70px;
   }
 }
