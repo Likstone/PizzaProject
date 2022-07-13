@@ -71,7 +71,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
-.lenora-fields, .chicken-grill, .statistic, .oriental, .best-seller, .header {
+.subscribe, .lenora-fields, .chicken-grill, .statistic, .oriental, .best-seller, .header {
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -486,7 +486,7 @@ body {
   width: 100%;
   height: 100%;
   position: absolute;
-  background: rgba(253, 204, 44, 0.6);
+  background: rgba(255, 240, 0, 0.4);
   z-index: 1;
 }
 .lenora-fields img {
@@ -515,6 +515,76 @@ body {
   color: #333333;
   margin-top: 50px;
   z-index: 3;
+}
+
+.subscribe {
+  min-height: 796px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f4f4f4;
+  position: relative;
+}
+.subscribe__title {
+  font-size: 100px;
+  font-family: "Grand Hotel";
+  line-height: 1.2;
+  font-weight: 400;
+  color: #333333;
+  margin: 160px 0 0 0;
+}
+.subscribe__text {
+  color: #333333;
+  font-size: 29.8px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Montserrat";
+  max-width: 830px;
+  margin-top: 55px;
+}
+.subscribe__form-box {
+  margin-top: 92px;
+}
+
+.subscribe-form {
+  max-width: 775px;
+  width: 100%;
+}
+.subscribe-form__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.subscribe-form__input input {
+  color: #333333;
+  font-size: 25px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Montserrat";
+  padding: 15px 1px 15px 35px;
+  border-radius: 4px 0px 0px 4px;
+  width: 100%;
+}
+.subscribe-form__button {
+  background-color: #ffc200;
+  border-radius: 0px 4px 4px 0px;
+  color: #333333;
+  font-size: 25px;
+  line-height: 1.2;
+  font-weight: 400;
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 15px 35px;
+  max-width: 230px;
 }
 
 .circle-img img {
@@ -573,8 +643,8 @@ body {
   right: 133px;
 }
 .bg-icon img:nth-child(9) {
-  top: 299px;
-  right: 100px;
+  top: 29px;
+  right: 318px;
 }
 
 @media (max-width: 1321px) {
@@ -648,13 +718,26 @@ body {
   .statistic .bg-icon img {
     display: none;
   }
+  .subscribe-form {
+    z-index: 3;
+  }
+  .subscribe-form__input {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 10px 0 10px;
+  }
+  .subscribe-form__button {
+    margin: 15px auto;
+  }
 }
 @media (max-width: 1000px) {
-  .statistic .bg-icon img:nth-child(5), .statistic .bg-icon img:nth-child(4), .statistic .bg-icon img:nth-child(2), .statistic .bg-icon img:nth-child(8) {
+  .statistic .bg-icon img:nth-child(5), .statistic .bg-icon img:nth-child(4), .statistic .bg-icon img:nth-child(2), .statistic .bg-icon img:nth-child(8), .statistic .bg-icon img:nth-child(9), .subscribe .bg-icon img:nth-child(5), .subscribe .bg-icon img:nth-child(4), .subscribe .bg-icon img:nth-child(2), .subscribe .bg-icon img:nth-child(8), .subscribe .bg-icon img:nth-child(9) {
     display: none;
   }
   .chicken-grill {
-    background-position: 0 -190px, 0 0;
+    background-position: 0 -200px, 0 0;
   }
   .chicken-grill__title {
     margin-top: 70px;
