@@ -806,9 +806,6 @@ body {
   }
 }
 @media (max-width: 990px) {
-  .footer__title-annotation {
-    display: none;
-  }
   .footer__nav-box {
     margin: 50px auto;
     display: -webkit-box;

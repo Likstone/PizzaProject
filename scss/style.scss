@@ -668,10 +668,7 @@ body {
 }
 
 @media (max-width:990px) {
-    .footer {
-        &__title-annotation {
-            display: none;
-        }
+    .footer {        
         &__nav-box {
             margin: 50px auto;
             display: flex;
